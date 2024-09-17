@@ -1,0 +1,126 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 10px;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin: 0 auto;
+	background: #000;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+
+	.title {
+		font-size: 3rem;
+		color: #fff;
+	}
+
+	.menu-buttons {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		gap: 10px;
+	}
+
+	button {
+		max-width: 250px;
+		width: 100%;
+		padding: 10px 5px;
+		margin: 20px 0;
+		border: none;
+		border-radius: 5px;
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: #ffffff;
+		background-color: #31a25c;
+		&:hover {
+			cursor: pointer;
+			background-color: #2e8f57;
+			box-shadow: 0px 0px 40px 10px rgb(119, 255, 192);
+			color: #190505;
+			text-shadow: 0px 0px 10px rgb(255, 255, 255);
+		}
+	}
+}
+
+.game-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	.map {
+		display: grid;
+		grid-template-columns: repeat(10, 1fr);
+		grid-template-rows: repeat(10, 1fr);
+		grid-gap: 5px;
+		width: 500px;
+		height: 500px;
+		background-color: #fff5f5;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+
+		.grid-item {
+			background-color: #ed0707;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.snake {
+				background-color: #31a25c;
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+		}
+	}
+
+	.controls {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 1/2%;
+		flex-wrap: wrap;
+		gap: 10px;
+		button {
+			max-width: 250px;
+			width: 100%;
+			padding: 10px 5px;
+			margin: 20px 0;
+			border: none;
+			border-radius: 5px;
+			font-size: 1.5rem;
+			font-weight: 700;
+			color: #ffffff;
+			background-color: #31a25c;
+			&:hover {
+				cursor: pointer;
+				background-color: #2e8f57;
+			}
+		}
+	}
+}
